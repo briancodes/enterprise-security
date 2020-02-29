@@ -1,0 +1,25 @@
+{
+  "name": "angular-enterprise-security-academy",
+  "version": "1.0.0",
+  "description": "Local demos to test the concepts taught in https://angular-academy.com/security/ course",
+  "scripts": {
+    "start:local": "nodemon module-1/local/local-server.js",
+    "start:remote": "nodemon module-1/remote/remote-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/briancodes/angular-enterprise-security-academy.git"
+  },
+  "author": "briancodes",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet-csp": "^2.9.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
