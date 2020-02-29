@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Local demos to test the concepts taught in https://angular-academy.com/security/ course",
   "scripts": {
-    "start:local": "nodemon module-1/local/local-server.js",
-    "start:remote": "nodemon module-1/remote/remote-server.js",
+    "start:m2": "concurrently \"npm:m2:local\" \"npm:m2:remote\"",
+    "m2:local": "nodemon module-2/local/local-server.js",
+    "m2:remote": "nodemon module-2/remote/remote-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,6 +16,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "concurrently": "^5.1.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet-csp": "^2.9.5"
