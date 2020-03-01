@@ -1,2 +1,8 @@
-# angular-enterprise-security-academy
-Local demos to test the concepts taught in https://angular-academy.com/security/ course
+# enterprise-security
+
+Node.js Express implementations of the concepts learned at Angular Academy Enterprise Security course
+
+## Debugging
+
+Stop all instances of node:
+- `taskkill /im node.exe` on Windows

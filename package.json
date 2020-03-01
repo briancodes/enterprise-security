@@ -1,27 +1,29 @@
 {
-  "name": "angular-enterprise-security-academy",
+  "name": "enterprise-security",
   "version": "1.0.0",
-  "description": "Local demos to test the concepts taught in https://angular-academy.com/security/ course",
+  "description": "Node.js Express implementations of the concepts learned at Angular Academy Enterprise Security course",
   "scripts": {
-    "start:m2": "concurrently \"npm:m2:local\" \"npm:m2:remote\"",
+    "start:m2": "npm-run-all --parallel \"m2:*\"",
     "m2:local": "nodemon module-2/local/local-server.js",
     "m2:remote": "nodemon module-2/remote/remote-server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "m2:local:debug": "nodemon --inspect module-2/local/local-server.js",
+    "m2:remote:debug": "nodemon --inspect module-2/remote/remote-server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/briancodes/angular-enterprise-security-academy.git"
+    "url": "git+https://github.com/briancodes/enterprise-security.git"
   },
   "author": "briancodes",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "concurrently": "^5.1.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet-csp": "^2.9.5"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5"
   }
 }

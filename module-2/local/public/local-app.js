@@ -23,3 +23,22 @@ console.log(
   callApi('local-api');
   callApi('http://localhost:8000/remote-api');
 })();
+
+document.getElementById('iframe-holder').innerHTML = `
+    <iframe
+        src="https://www.w3.org"
+    ></iframe>
+    <!-- script elements don't execute using innerHTML by default (but beware of ssr!) -->
+    <script>
+        console.log('script elements don't execute when added via innerHTML');
+    </script>
+    <script src="http://localhost:8000/remote-app.js"></script>
+`;
+
+// Error: Refused to execute inline event handler violates CSP directive script-src
+// nonce and sha-xxx don't work with inline handlers, so prevents them
+// Possilby can be bypassed with custom sha, but in general to be avoided
+// https://github.com/w3c/webappsec-csp/issues/13
+document.getElementById('img-holder').innerHTML = `
+    <img nonce="1" src="/" onerror="console.log('image xss')">
+`;

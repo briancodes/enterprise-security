@@ -5,11 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "chrome",
-      "request": "launch",
-      "name": "local:4000",
-      "url": "http://localhost:4000",
-      "webRoot": "${workspaceFolder}"
+      "type": "node",
+      "request": "attach",
+      "name": "Node: Nodemon",
+      "processId": "${command:PickProcess}",
+      "restart": true,
+      "protocol": "inspector"
     }
   ]
 }
