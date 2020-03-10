@@ -20,7 +20,9 @@ Always assume the UI is compromised and validate all parameters and input
 #### HTTP Security Headers
 
 `Content-Security-Policy` - see Module 1
+
 `Strict-Transport-Security` - enforce HTTPS communication
+
 `X-Frame-Options: deny/sameorigin` - prevent response page rendering in `<iframe>`
 - prevent **Clickjacking**
     - invisible `<iframes>` that you click on thinking you're clicking on item above
@@ -54,9 +56,13 @@ Server maintains a store of session_id with associated objects. Can be protect a
 - JWT (JSON Web Token)
     - It's not a protocol, just the format of the token
 
-HEADER: {alg: "HS356", typ: "JWT"}
-PAYLOAD: { username: "user", role: "admin", exp: 1556173133 }
-SIGNATURE: HMACSHA256( header + payload, SECRET)
+```
+{
+    HEADER: {alg: "HS356", typ: "JWT"}
+    PAYLOAD: { username: "user", role: "admin", exp: 1556173133 }
+    SIGNATURE: HMACSHA256( header + payload, SECRET)
+}
+```
 
 JWT Token -> base64 string -> server validates authenticity & integrity
 
