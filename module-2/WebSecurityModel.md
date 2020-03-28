@@ -50,6 +50,8 @@ app.use(cors({origin: 'http://127.0.0.1:8080'}))
 ```
 `Response Headers` would then include `Access-Control-Allow-Origin: http://127.0.0.1:8080`, and browser would allow the response to be returned
 
+> Great book to reference [CORS in Action, Manning Publications](https://www.manning.com/books/cors-in-action)
+
 #### Credentials Include
 
 Making a cross origin request (fetch) does not send cookies by default. To send cookies requires the `credentials: include` header

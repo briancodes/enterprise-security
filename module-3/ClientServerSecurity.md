@@ -89,3 +89,5 @@ Token is generated during `login`
 | usually enough                | securing 3rd party API
 |                               | short lived grants (download/API access)
 |                               | protocols like OAuth2/OpenID
+
+> [JSON Web Tokens vs Session Cookies | Ponyfoo.com](https://ponyfoo.com/articles/json-web-tokens-vs-session-cookies)
