@@ -79,6 +79,10 @@ Token is generated during `login`
 - secret needs to be shared between nodes (unless asymmetric algorithm used)
 - storing in web app can be problematic (F5 refresh)
 
+[Benifits of JWT over Session Cookies, StackOverflow](https://security.stackexchange.com/questions/191894/whats-the-benefit-of-jwt-if-user-needs-to-send-his-credentials-once-anyway)
+
+[Google Sign-in, developers.google.com](https://developers.google.com/identity/sign-in/web/backend-auth)
+
 ## When to use Sessions vs JWT Tokens
 
 | Sessions | Tokens                                
