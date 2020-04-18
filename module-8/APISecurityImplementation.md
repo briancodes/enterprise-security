@@ -81,6 +81,8 @@ function counterparty() {
 
 Use express `cors`
 
+> Note: if enabling `CORS` you probably won't be using `cookies` and `csrf` protection. Cookies + csrf protection is generally for same-origin client/server setup (you generally won't have a session cookie from a cross-origin XHR request)
+
 #### Appendix
 
 A note on using `return next()` - as in always use it!
